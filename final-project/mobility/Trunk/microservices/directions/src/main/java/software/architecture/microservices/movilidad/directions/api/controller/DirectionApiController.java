@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import software.architecture.microservices.movilidad.directions.api.DirectionApi;
 import software.architecture.microservices.movilidad.directions.dto.DirectionsRq;
 import software.architecture.microservices.movilidad.directions.dto.DirectionsRs;
+import software.architecture.microservices.movilidad.directions.dto.DirectionsGoogleRs;
 import software.architecture.microservices.movilidad.directions.service.DirectionsService;
 
 @RestController
@@ -21,7 +22,7 @@ public class DirectionApiController implements DirectionApi {
 	private DirectionsService directionsSvc;
 	
 	@Override
-	public ResponseEntity<DirectionsRs> postDirections(@Valid @RequestBody(required = true) DirectionsRq directionsRq) {
+	public ResponseEntity<DirectionsGoogleRs> postDirections(@Valid @RequestBody(required = true) DirectionsRq directionsRq) {
 		 return ResponseEntity.ok(directionsSvc.computeDirection(directionsRq));
 	}
 	

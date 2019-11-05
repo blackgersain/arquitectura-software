@@ -1,52 +1,62 @@
 package software.architecture.microservices.movilidad.directions.dto;
 
-import java.io.Serializable;
+import java.time.LocalDateTime;
 
-import com.google.maps.model.DirectionsResult;
+public class DirectionsRs {
 
-public class DirectionsRs implements Serializable {
+	private Double originLat;
+	private Double originLng;
+	private Double destinationLat;
+	private Double destinationLng;
+	private LocalDateTime dateTime;
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -664699770455471861L;
-	
-	private DirectionsResult directionsResult;
-	private String status;
-	private String message;
-	
-	public DirectionsRs() {}
-	
-	public DirectionsRs(DirectionsResult directionsResult, String status, String message) {
+	public DirectionsRs(Double originLat, Double originLng, Double destinationLat, Double destinationLng,
+			LocalDateTime dateTime) {
 		super();
-		this.directionsResult = directionsResult;
-		this.status = status;
-		this.message = message;
+		this.originLat = originLat;
+		this.originLng = originLng;
+		this.destinationLat = destinationLat;
+		this.destinationLng = destinationLng;
+		this.dateTime = dateTime;
 	}
 
-	public DirectionsResult getDirectionsResult() {
-		return directionsResult;
+	public Double getOriginLat() {
+		return originLat;
 	}
 
-	public void setDirectionsResult(DirectionsResult directionsResult) {
-		this.directionsResult = directionsResult;
+	public void setOriginLat(Double originLat) {
+		this.originLat = originLat;
 	}
 
-	public String getStatus() {
-		return status;
+	public Double getOriginLng() {
+		return originLng;
 	}
 
-	public void setStatus(String status) {
-		this.status = status;
+	public void setOriginLng(Double originLng) {
+		this.originLng = originLng;
 	}
 
-	public String getMessage() {
-		return message;
+	public Double getDestinationLat() {
+		return destinationLat;
 	}
 
-	public void setMessage(String message) {
-		this.message = message;
+	public void setDestinationLat(Double destinationLat) {
+		this.destinationLat = destinationLat;
 	}
-	
-	
+
+	public Double getDestinationLng() {
+		return destinationLng;
+	}
+
+	public void setDestinationLng(Double destinationLng) {
+		this.destinationLng = destinationLng;
+	}
+
+	public LocalDateTime getDateTime() {
+		return dateTime;
+	}
+
+	public void setDateTime(LocalDateTime dateTime) {
+		this.dateTime = dateTime;
+	}
 }

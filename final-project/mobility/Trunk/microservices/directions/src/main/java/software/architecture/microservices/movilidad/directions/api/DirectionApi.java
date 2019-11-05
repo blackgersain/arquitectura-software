@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import software.architecture.microservices.movilidad.directions.dto.DirectionsRq;
 import software.architecture.microservices.movilidad.directions.dto.DirectionsRs;
+import software.architecture.microservices.movilidad.directions.dto.DirectionsGoogleRs;
 
 public interface DirectionApi {
 
@@ -16,7 +17,7 @@ public interface DirectionApi {
 		        produces = { "application/json", "application/xml" }, 
 		        consumes = { "application/json", "application/xml" },
 		        method = RequestMethod.POST)
-		    ResponseEntity<DirectionsRs> postDirections(DirectionsRq directionsRq);
+		    ResponseEntity<DirectionsGoogleRs> postDirections(DirectionsRq directionsRq);
 		    
 	 @RequestMapping(value = "/directions",
 		        produces = { "application/json", "application/xml" }, 
