@@ -23,8 +23,12 @@ public class DirectionsRq implements Serializable {
 	@NotNull
 	private Double destinationLng;
 	
-	public DirectionsRq(Double originLat, Double originLng, Double destinationLat, Double destinationLng) {
-		super();
+	public DirectionsRq(
+			  @NotNull Double originLat
+			, @NotNull Double originLng
+			, @NotNull Double destinationLat
+			, @NotNull Double destinationLng) 
+	{
 		this.originLat = originLat;
 		this.originLng = originLng;
 		this.destinationLat = destinationLat;
