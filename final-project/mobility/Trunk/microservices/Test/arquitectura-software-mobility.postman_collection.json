@@ -1,0 +1,90 @@
+{
+	"variables": [],
+	"info": {
+		"name": "arquitectura-software-mobility",
+		"_postman_id": "7e4781d2-bbf2-018a-420e-b294e0b9c958",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/directions",
+			"request": {
+				"url": "http://localhost:8080/directions",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t  \"originLat\": 6.1902579\n\t, \"originLng\": -75.6046406\n\t, \"destinationLat\": 6.242247\n\t, \"destinationLng\": -75.5740583\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/directions",
+			"request": {
+				"url": "http://localhost:8080/directions",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "au",
+						"value": "",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/weatherForecast",
+			"request": {
+				"url": "http://localhost:8080/weatherForecast",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/weatherForecast",
+			"request": {
+				"url": "http://localhost:8080/weatherForecast",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t  \"originLat\": 6.1902579\n\t, \"originLng\": -75.6046406\n\t, \"destinationLat\": 6.242247\n\t, \"destinationLng\": -75.5740583\n\t, \"originDateTime\": \"2019-11-05T10:36:50\"\n\t, \"destinationDateTime\": \"2019-11-05T11:20:07\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
