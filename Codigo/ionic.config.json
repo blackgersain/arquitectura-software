@@ -1,7 +1,0 @@
-{
-  "name": "MapsTransport",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "angular"
-}
